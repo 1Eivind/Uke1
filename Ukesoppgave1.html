@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ukesoppgave 1: Min første nettside</title>
+</head>
+<body>
+<div style="background-color: red;"><h1>Litt om meg</h1></div>
+<br>
+
+<img src="img/Selfie.jpg" alt="bilde av meg" width="438px" height="395px">
+
+<br>
+<p>
+    <h2>Hei, jeg heter Eivind. Mine hobbyer er:</h2>
+
+    <ul><li>Lære programmering (nybegynner)</li>
+    <li>Jogging eller turgåing</li>
+    <li>Bitcoin</li>
+    <li>Filosofi/politikk</li>
+    <li>Fotografering for <a href="https://www.instagram.com/eivind_berge/" target="_blank">Instagram</a></li>
+</ul></p>
+
+<p><button id="background-button" onclick="changebackground()">Trykk her for å endre bakgrunn</button>
+<p>
+
+<h3>Bla gjennom bilder</h3>
+<div style="display:flex;" id="numberAndButtons"></div>
+
+
+
+<script>
+    function changebackground(){
+        var colors = ["red", "pink", "blue", "white", "aquamarine", "yellow"];
+        document.body.style.background = colors[colors.length * Math.random() | 0];
+    }
+
+    showNumber1();
+        function showNumber1(){
+            document.getElementById('numberAndButtons').innerHTML = /*HTML*/`
+                <button onclick="showNumber4()">
+                ◀
+                <button>
+                <div style="width: 500px; text-align: center;" -->
+                <img src="img/Eksempelbilde1.jpg" alt="Eksempelbilde 1" width="500x" height="500px">
+                </div>
+                <button onclick="showNumber2()">
+                ▶
+                </button>
+                `;
+        }
+
+    showNumber2();
+        function showNumber2(){
+            document.getElementById('numberAndButtons').innerHTML = /*HTML*/`
+                <button onclick="showNumber1()">
+                ◀
+                <button>
+                <div style="width: 500px; text-align: center;" -->
+                <img src="img/Eksempelbilde2.jpg" alt="Eksempelbilde 2" width="500x" height="500px">
+                </div>
+                <button onclick="showNumber3()">
+                ▶
+                </button>
+                `;
+        }
+
+    showNumber3();
+        function showNumber3(){
+            document.getElementById('numberAndButtons').innerHTML = /*HTML*/`
+                <button onclick="showNumber2()">
+                ◀
+                <button>
+                <div style="width: 500px; text-align: center;" -->
+                <img src="img/Bryggen.jpg" alt="Bryggen" width="500x" height="500px">
+                </div>
+                <button onclick="showNumber4()">
+                ▶
+                </button>
+                `;
+        }
+
+    showNumber4();
+        function showNumber4(){
+            document.getElementById('numberAndButtons').innerHTML = /*HTML*/`
+                <button onclick="showNumber3()">
+                ◀
+                <button>
+                <div style="width: 500px; text-align: center;" -->
+                <img src="img/Harned.jpg" alt="Eksempel 4" width="500x" height="500px">
+                </div>
+                <button onclick="showNumber1()">
+                ▶
+                </button>
+                `;
+        }
+
+    
+
+</script>
+</body>
+</html>

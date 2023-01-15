@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+    #eivindstag, #eivindstag2{background-color: brown;
+    width: 500px;
+    margin: 10px;
+    }
+    #eivindstag2{background-color:antiquewhite
+    }
+
+    div.card{
+        background-color: aquamarine;
+    }
+    </style>
+
+</head>
+<body>
+
+
+
+    <h1>nå skal vi lage første JavaScript</h1>▶◀
+
+<div class="card">
+    <div class="header" onclick="hello()">Overskrift A</div>
+    <div id="eivindstag">tom</div>
+</div>
+
+<div class="card">
+    <div class="header" onclick="hello2()">Overskrift B</div>
+    <div id="eivindstag2">tom</div>
+</div>
+
+    <button onclick="hello()">Trykk her</button>
+    <button onclick="hello2()">Trykk2 her</button>
+    <button onclick="blankAll()">Blank alle</button>
+
+   <!-- I am a comment, this is how to comment in html! -->
+
+<h3>Bla opp og ned</h3>
+<div style="display:flex;" id="numberAndButtons"></div>
+   
+
+    <script>
+        showNumber1();
+        function showNumber1(){
+            document.getElementById('numberAndButtons').innerHTML = /*HTML*/`
+                <button onclick="showNumber4()">
+                ◀
+                <button>
+                <div style="width: 40px; text-align: center;" -->
+                1
+                </div>
+                <button onclick="showNumber2()">
+                ▶
+                </button>
+                `;
+        }
+
+        showNumber2();
+        function showNumber2(){
+            document.getElementById('numberAndButtons').innerHTML = /*HTML*/`
+                <button onclick="showNumber1()">
+                ◀
+                <button>
+                <div style="width: 40px; text-align: center;" -->
+                2
+                </div>
+                <button onclick="showNumber3()">
+                ▶
+                </button>
+                `;
+        }
+
+        showNumber3();
+        function showNumber3(){
+            document.getElementById('numberAndButtons').innerHTML = /*HTML*/`
+                <button onclick="showNumber2()">
+                ◀
+                <button>
+                <div style="width: 40px; text-align: center;" -->
+                3
+                </div>
+                <button onclick="showNumber4()">
+                ▶
+                </button>
+                `;
+        }
+
+        showNumber4();
+        function showNumber4(){
+            document.getElementById('numberAndButtons').innerHTML = /*HTML*/`
+                <button onclick="showNumber3()">
+                ◀
+                <button>
+                <div style="width: 40px; text-align: center;" -->
+                4
+                </div>
+                <button onclick="showNumber1()">
+                ▶
+                </button>
+                `;
+        }
+
+        function hello(){
+            document.getElementById('eivindstag').innerHTML=/*html*//*kommentarer begynner med skråstrek stjerneog slutter med det, eller du kan bruke to skråstreker for å kommentere resten av linjen*/
+            //dette er en kommentar i javascript som går resten av linjen
+            `'Ha<i>l</i>l<b>o</b>'
+            /*kommentarer begynner med skråstrek stjerneog slutter med det, eller du kan bruke to skråstreker for å kommentere resten av linjen*/
+            //dette er en kommentar i javascript som går resten av linjen
+            aklsdjrfalkse dfjalsk fdjklsytes  yes testing the backtick!!!!
+            lkjølisdfjgøhjkl
+            `;
+        }
+            function hello2(){
+            document.getElementById('eivindstag2').innerHTML=/*html*//*kommentarer begynner med skråstrek stjerneog slutter med det, eller du kan bruke to skråstreker for å kommentere resten av linjen*/
+            //dette er en kommentar i javascript som går resten av linjen
+            `'Ha<i>l</i>l<b>o</b>2222222222222222'
+            /*kommentarer begynner med skråstrek stjerneog slutter med det, eller du kan bruke to skråstreker for å kommentere resten av linjen*/
+            //dette er en kommentar i javascript som går resten av linjen
+            aklsdjrfalkse dfjalsNOOOOE <b>ANNNNETTT</b> Å VISEE!!!!!k fdjklsytes  yes testing the backtick!!!!
+            lkjølisdfjgøhjkl
+            `;}
+        
+        function blankAll(){
+            document.getElementById('eivindstag').innerHTML='';
+            document.getElementById('eivindstag2').innerHTML='';
+        }
+    </script>
+</body>
+</html>
